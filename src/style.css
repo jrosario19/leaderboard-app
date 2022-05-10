@@ -13,17 +13,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 15vw;
+  width: 25vw;
 }
 
 .section-scores {
   display: flex;
-  margin-left: 50px;
-  
 }
 
 .form {
-  margin-left: 50px;
+  margin-left: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +49,62 @@ h2 {
 }
 
 .btn {
-  
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
+.add-btn {
+  align-self: flex-end;
+}
 
+.list-scores {
+  width: 25vw;
+  height: 60vh;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-scores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .container-score {
+    order: 1;
+  }
+
+  input {
+    width: 70vw;
+  }
+
+  .container-headline-button {
+    width: 70vw;
+  }
+
+  .add-btn {
+    align-self: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .list-scores {
+    width: 70vw;
+  }
+
+  .btn-refresh {
+    margin-bottom: 25px;
+  }
+
+  .headline {
+    text-align: center;
+  }
+}
