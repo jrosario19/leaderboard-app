@@ -15,8 +15,6 @@ body {
   align-items: center;
   width: 25vw;
   padding: 0 10px 0 10px;
-
-  
 }
 
 .section-scores {
@@ -69,10 +67,9 @@ h2 {
   padding: 0 10px 10px 10px;
 }
 
-.score{
+.score {
   margin-left: 10px;
   height: 15px;
-  
 }
 
 .score-container {
@@ -82,8 +79,7 @@ h2 {
 }
 
 .score-container:nth-child(even) {
-  background-color:darkgray;
-
+  background-color: darkgray;
 }
 
 @media screen and (max-width: 1000px) {
