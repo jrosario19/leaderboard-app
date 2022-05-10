@@ -14,6 +14,9 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 25vw;
+  padding: 0 10px 0 10px;
+
+  
 }
 
 .section-scores {
@@ -59,9 +62,28 @@ h2 {
 
 .list-scores {
   width: 25vw;
-  height: 60vh;
   border: 1px solid black;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 10px 10px;
+}
+
+.score{
+  margin-left: 10px;
+  height: 15px;
+  
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.score-container:nth-child(even) {
+  background-color:darkgray;
+
 }
 
 @media screen and (max-width: 1000px) {
