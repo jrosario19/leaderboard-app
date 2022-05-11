@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #e6e8eb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,19 +39,24 @@ input {
   border-radius: 5px;
   padding-left: 10px;
   font-size: 1.1vw;
+  border: 1px solid #63bdd4;
 }
 
 h1 {
   font-size: 3.5vw;
+  color: #63bdd4;
 }
 
 h2 {
   font-size: 1.8vw;
+  color: #63bdd4;
 }
 
 .btn {
   padding: 10px 15px;
   border-radius: 5px;
+  background-color: #63bdd4;
+  color: white;
 }
 
 .add-btn {
@@ -64,22 +69,71 @@ h2 {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 0 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .score {
   margin-left: 10px;
   height: 15px;
+  position: relative;
+  display: flex;
+  bottom: 7px;
+  align-self: center;
+  font-size: 1.2vw;
+  text-transform: capitalize;
+}
+
+.score > span {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.scorePlaceFirst {
+  position: absolute;
+  left: 20vw;
+  background-color: gold;
+  color: white;
+  font-size: 1.2vw;
+  padding: 5px;
+  align-self: center;
+  top: -0.1vw;
+}
+
+.scorePlaceSecond {
+  position: absolute;
+  left: 20vw;
+  background-color: silver;
+  color: white;
+  font-size: 1.2vw;
+  padding: 5px;
+  align-self: center;
+  top: -0.1vw;
+}
+
+.scorePlaceThird {
+  position: absolute;
+  left: 20vw;
+  background-color: #cd7f32;
+  color: white;
+  font-size: 1.2vw;
+  padding: 5px;
+  align-self: center;
+  top: -0.1vw;
 }
 
 .score-container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   border-radius: 5px;
+  height: 4vw;
 }
 
-.score-container:nth-child(even) {
-  background-color: darkgray;
+.score-container:nth-child(odd) {
+  background-color: #adc0db;
+}
+
+.score-container p {
+  align-self: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -103,6 +157,7 @@ h2 {
 
   input {
     width: 70vw;
+    font-size: 2.8vw;
   }
 
   .container-headline-button {
@@ -124,5 +179,49 @@ h2 {
 
   .headline {
     text-align: center;
+  }
+
+  .score-container {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 8vw;
+  }
+
+  .score {
+    font-size: 3.5vw;
+  }
+
+  .scorePlaceFirst {
+    position: absolute;
+    left: 57vw;
+    background-color: gold;
+    color: white;
+    font-size: 2.4vw;
+    padding: 5px;
+    align-self: center;
+    top: 2px;
+  }
+
+  .scorePlaceSecond {
+    position: absolute;
+    left: 57vw;
+    background-color: silver;
+    color: white;
+    font-size: 2.4vw;
+    padding: 5px;
+    align-self: center;
+    top: 2px;
+  }
+
+  .scorePlaceThird {
+    position: absolute;
+    left: 57vw;
+    background-color: #cd7f32;
+    color: white;
+    font-size: 2.4vw;
+    padding: 5px;
+    align-self: center;
+    top: 2px;
   }
 }
