@@ -31,16 +31,38 @@ const retrieveGameScores = async () => {
   return scores;
 };
 
-const scores = (item) => `
-    <div class="score-container">
-    <p class="score">${item.user}: <span class="score-number">${item.score}</span></p>
-    </div>
-    `;
-
 const displayScores = async () => {
   const listOfScore = await retrieveGameScores();
   const listOfScoreSorted = listOfScore.result.sort((a, b) => b.score - a.score);
-  listscore.innerHTML = `${listOfScoreSorted.map(scores).join('')}`;
+  listscore.innerHTML = '';
+  for (let i = 0; i < listOfScoreSorted.length; i += 1) {
+    const item = listOfScoreSorted[i];
+    if (i == 0) {
+      listscore.innerHTML += `
+        <div class="score-container">
+        <p class="score">${item.user}: <span class="score-number">${item.score}</span><span class="scorePlaceFirst">1st</span></p>
+        </div>
+        `;
+    } else if (i == 1) {
+      listscore.innerHTML += `
+        <div class="score-container">
+        <p class="score">${item.user}: <span class="score-number">${item.score}</span><span class="scorePlaceSecond">2sd</span></p>
+        </div>
+        `;
+    } else if (i == 2) {
+      listscore.innerHTML += `
+            <div class="score-container">
+            <p class="score">${item.user}: <span class="score-number">${item.score}</span><span class="scorePlaceThird">3rd</span></p>
+            </div>
+            `;
+    } else {
+      listscore.innerHTML += `
+        <div class="score-container">
+        <p class="score">${item.user}: <span class="score-number">${item.score}</span></p>
+        </div>
+        `;
+    }
+  }
 };
 
 export { displayScores, addGame, newScore };
