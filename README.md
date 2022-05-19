@@ -9,7 +9,7 @@ The Leaderboard  is a website show scores added by different players. It also al
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://jrosario19.github.io/leaderboard-app/)
+[Live Demo Link](https://jrosario19.github.io/leaderboard-app/dist)
 
 ## Getting Started
 To get started and get a local copy of this project, follow the next intructions:
